@@ -1,12 +1,10 @@
-const dbConnection = require("../../config/dbConnection")
-
+const route = "LOG "
 module.exports = function (app) {
 
-    var mysqlConnection = dbConnection();
+    app.get(`/log`, function (req, res) {
+        var mysqlConnection = app.config.dbConnection(route);
 
-    app.get('/log', function (req, res) {
-
-        mysqlConnection.query(`SELECT * FROM LOG`, function (err, result) {
+        mysqlConnection.query(`SELECT * FROM ${route}`, function (err, result) {
             res.send(result)
         })
     })
