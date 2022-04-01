@@ -1,11 +1,16 @@
-const route = "LOG "
-module.exports = function (app) {
+module.exports = function (application) {
 
-    app.get(`/log`, function (req, res) {
-        var mysqlConnection = app.config.dbConnection(route);
+    application.get(`/log`, function (req, res) {
 
-        mysqlConnection.query(`SELECT * FROM ${route}`, function (err, result) {
-            res.send(result)
+        var mysqlConnection = application.config.dbConnection();
+        var logModel = application.app.models.logModel;
+
+        logModel.getLog(mysqlConnection, function(error, result){
+            res.render('log/log', {log : result})
+
+            //res.send(result)
         })
+
+       
     })
 }
