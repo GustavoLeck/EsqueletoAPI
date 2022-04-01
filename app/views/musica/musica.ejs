@@ -2,11 +2,11 @@
 	<html lang="pt-br">
 		<head>
 			<meta charset="utf-8"/>
-			<title>Notícia</title>
+			<title>Log</title>
 		</head>
 	<body>
 
-		<h1>Notícia</h1>
+		<h1>Log</h1>
 
 		<table>
 			<tr>
@@ -14,23 +14,27 @@
 				<td>Código</td>
 				<td>Bot</td>
 				<td>Nome</td>
-				<td>Autor</td>
-				<td>Data</td>
-				<td>Hora</td>
-				<td>Descrição</td>
+				<td>Canal</td>
+				<td>Duraçao</td>
+				<td>Visualização</td>
+                <td>Link</td>
+                <td>Date</td>
+                <td>Time</td>
 			</tr>
 			<tr>
 				<tr>
-					<td><%= musica[0].ID %></td>
-					<td><%= musica[0].CODIGO %></td>
-					<td><%= musica[0].BOT %></td>
-					<td><%= musica[0].NOME %></td>
-					<td><%= musica[0].CANAL %></td>
-					<td><%= musica[0].DURACAO %></td>
-					<td><%= musica[0].VIZUALIZACAO %></td>
-					<td><%= musica[0].LINK %></td>		
-                    <td><%= musica[0].DATE%></td>	
-                    <td><%= musica[0].TIME %></td>			
+					<tr>
+                        <td><%= musica[0].ID %></td>
+                        <td><%= musica[0].CODIGO %></td>
+                        <td><%= musica[0].BOT %></td>
+                        <td><%= musica[0].NOME %></td>
+                        <td><%= musica[0].CANAL %></td>
+                        <td><%= musica[0].DURACAO %></td>
+                        <td><%= musica[0].VISUALIZACAO %></td>
+                        <td><%= musica[0].LINK %></td>		
+                        <td><%= musica[0].DATE%></td>	
+                        <td><%= musica[0].TIME %></td>				
+                    </tr>				
 				</tr>
 			</tr>
 		</table>

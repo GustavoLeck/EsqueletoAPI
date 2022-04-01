@@ -7,6 +7,7 @@ module.exports = function (application) {
 
         musicaModel.getMusicas(mysqlConnection, function(error, result){
             res.render('musica/musicas', {musica : result})
+            //res.send(result)
         })
 
        

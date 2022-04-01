@@ -2,23 +2,24 @@
 	<html lang="pt-br">
 		<head>
 			<meta charset="utf-8"/>
-			<title>Notícias</title>
+			<title>Músicas</title>
 		</head>
 	<body>
 
-		<h1>Notícias</h1>
+		<h1>Músicas</h1>
 
-		<table>
-			
+		<table>		
 			<tr>
 				<td>ID</td>
 				<td>Código</td>
 				<td>Bot</td>
 				<td>Nome</td>
-				<td>Autor</td>
-				<td>Data</td>
-				<td>Hora</td>
-				<td>Descrição</td>
+				<td>Canal</td>
+				<td>Duraçao</td>
+				<td>Visualização</td>
+                <td>Link</td>
+                <td>Date</td>
+                <td>Time</td>
 			</tr>
 			<% for(var i = 0; i < musica.length; i++){ %>
 				<tr>
@@ -28,7 +29,7 @@
 					<td><%= musica[i].NOME %></td>
 					<td><%= musica[i].CANAL %></td>
 					<td><%= musica[i].DURACAO %></td>
-					<td><%= musica[i].VIZUALIZACAO %></td>
+					<td><%= musica[i].VISUALIZACAO %></td>
 					<td><%= musica[i].LINK %></td>		
                     <td><%= musica[i].DATE%></td>	
                     <td><%= musica[i].TIME %></td>				
