@@ -1,11 +1,15 @@
-module.exports = function(){
+function Log(connection){
+    this._connection = connection
+}
 
-    this.getLog = function(connection, callback){
-        connection.query('SELECT * FROM LOG WHERE ID = 1', callback);
-    }
-    this.getLogs = function(connection, callback){
-        connection.query('SELECT * FROM LOG', callback);
-    }
-    return this;
+Log.prototype.getLogs = function(callback){
+    this._connection.query('SELECT * FROM LOG', callback);
+}
 
+Log.prototype.getLog = function(callback){
+    this._connection.query('SELECT * FROM LOG ORDER BY ID DESC LIMIT 1', callback);
+}
+
+module.exports = function(){ 
+    return Log;
 }

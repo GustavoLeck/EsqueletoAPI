@@ -1,6 +1,5 @@
 function Musica(connection){
     this._connection = connection
-
 }
 
 Musica.prototype.getMusicas = function(callback){
@@ -8,7 +7,7 @@ Musica.prototype.getMusicas = function(callback){
 }
 
 Musica.prototype.getMusica = function(callback){
-    this._connection.query('SELECT * FROM MUSICA WHERE ID = 1', callback);
+    this._connection.query('SELECT * FROM MUSICA ORDER BY ID DESC LIMIT 1', callback);
 }
 
 Musica.prototype.postMusica = function(valor, callback){
