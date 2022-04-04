@@ -7,10 +7,17 @@ module.exports = function (application) {
 
         logModel.getLog(mysqlConnection, function(error, result){
             res.render('log/log', {log : result})
+        }) 
+    })
 
-            //res.send(result)
+    application.get(`/logs`, function (req, res) {
+
+        var mysqlConnection = application.config.dbConnection();
+        var logModel = application.app.models.logModel;
+
+        logModel.getLogs(mysqlConnection, function(error, result){
+            res.render('log/logs', {log : result})
         })
 
-       
     })
 }

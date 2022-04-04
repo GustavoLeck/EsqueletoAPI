@@ -1,8 +1,8 @@
 const mysql = require('mysql');
 
 const connection = function(route){
-    console.log(`Connection with DB require by: ${route}`)
-     return  mysqlConnection = mysql.createConnection({
+    console.log(`Connection with DB require`)
+    return  mysqlConnection = mysql.createConnection({
         host: "localhost",
         user: "root",
         password: "BobMarley#1981.,",
@@ -10,5 +10,6 @@ const connection = function(route){
     })}
 
 module.exports = function () {
-        return connection;
+
+    return connection;
 }
