@@ -10,7 +10,7 @@ module.exports = function (application) {
     })
 
     application.get(`/addlog`, function (req, res) {
-        application.app.controllers.log.addlog(application, req, res)
+        application.app.controllers.log.addLog(application, req, res)
     })
 
     application.post(`/log/addlog`, function (req, res) {  
