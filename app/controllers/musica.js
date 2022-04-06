@@ -45,7 +45,5 @@ module.exports.salvarMusica = function(application, req, res){
 
     musicaModel.postMusica(req.body, function(error, result){
         res.redirect("/musica")
-
     })
-
 }

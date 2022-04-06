@@ -8,4 +8,13 @@ module.exports = function (application) {
     application.get(`/logs`, function (req, res) {
         application.app.controllers.log.logs(application, req, res)
     })
+
+    application.get(`/addlog`, function (req, res) {
+        application.app.controllers.log.addlog(application, req, res)
+    })
+
+    application.post(`/log/addlog`, function (req, res) {  
+        application.app.controllers.log.salvarLog(application, req, res)
+        
+    })
 }
